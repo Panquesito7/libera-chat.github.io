@@ -2,7 +2,7 @@
 title: Privacy
 ---
 
-This page was last updated 2021-06-08.
+This page was last updated {{ site.privacy_last_modified }} ([history][hist]).
 
 Libera Chat is a non-profit organisation based in Sweden (org.nr. 802535-6448).
 Libera Chat operates the Libera Chat IRC network, and the website Libera.Chat,
@@ -27,7 +27,7 @@ In particular:
 - You can delete your information from our database.
 
 You may also exercise your rights by contacting <policy@libera.chat>.
-If you wish to file a complaint see the website of the
+If you wish to file a complaint, see the website of the
 [Swedish Authority for Privacy Protection (IMY)][imy] for their contact details.
 
 When using Libera Chat services, Libera Chat may work with the following personal
@@ -36,6 +36,7 @@ information about you:
 - Nickname on the Libera Chat IRC network
 - E-mail address
 - IP address/hostname
+- Name and version of the software you use to connect to us
 - Name and project affiliation
 - Other information about your role, including if you volunteer for us
 - Data regarding our interactions with you
@@ -48,9 +49,9 @@ send to our staff or support mechanisms.
 This data may be used for the following purposes:
 
 - To improve and debug the Libera Chat services.
-- To manage your relationship with Libera Chat
+- To manage your relationship with Libera Chat.
 - Account management.
-- Protection from abuse.
+- Protection of our staff, users, and Libera Chat services from abuse.
 - To enable you to reset your password.
 - To contact you in relation to project registration, sponsorship, and channel
   namespace management.
@@ -78,6 +79,16 @@ Libera Chat normally stores your data collected on the IRC network for the
 purpose of debugging and restoration for no more than 60 days after you last
 connect to the network, or delete your account. Whichever comes last.
 
+Data collected for the purposes of recording and mitigating abuse may be kept
+for up to 365 days after the abuse occurred, or the mitigation ended, whichever
+comes last. The following information is covered by this policy:
+
+- network bans (target, setter, reason, duration, timestamp, known aliases)
+- connections affected by network bans (nickname, username, hostname,
+  IP address, timestamp of effect)
+- account registrations for the purposes of network policy violation (email
+  address, nickname, username, hostname, IP address, timestamp, known aliases)
+
 Data collected by email or our support system in relation to project
 registration, sponsorship and channel namespace management will be stored at
 least until the project is deregistered or the sponsorship is terminated, this
@@ -101,4 +112,5 @@ without notice. The currently active version can be found on this website.
 For any inquiries or concerns about how Libera Chat process your data,
 please email <policy@libera.chat>.
 
-[imy]: https://www.imy.se/other-lang/in-english/
+[imy]: https://www.imy.se/en/
+[hist]: https://github.com/Libera-Chat/libera-chat.github.io/commits/main/privacy.md

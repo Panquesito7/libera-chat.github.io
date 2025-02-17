@@ -3,14 +3,17 @@ description: A next-generation IRC network for FOSS projects collaboration!
 baseurl: ""
 url: https://libera.chat
 
-twitter:
-  username: liberachat
-  card: summary
-facebook:
-  publisher: liberachat
+markdown: kramdown
+kramdown:
+  input: GFM
+
+highlighter: rouge
+
 mastodon:
   username: liberachat
   instance: fosstodon.org
+bluesky:
+  profile: libera.chat
 irc:
   plaintext:
     name: irc.libera.chat:6667 (plaintext)
@@ -21,7 +24,7 @@ irc:
 
 collections_dir: content
 
-permalink: /:name
+permalink: /:name/
 
 collections:
   guides:
@@ -30,9 +33,15 @@ collections:
   posts:
     output: true
     permalink: /news/:title
+  minutes:
+    output: true
+    permalink: /:collection/:year-:month-:day-:title
 
 feed:
   path: atom.xml
+  collections:
+    minutes:
+      path: "/minutes/atom.xml"
 
 defaults:
   - scope:
@@ -40,11 +49,22 @@ defaults:
       type: guides
     values:
       layout: guides
+      seo:
+        type: TechArticle
   - scope:
       path: ""
       type: posts
     values:
       layout: article
+      seo:
+        type: Article
+  - scope:
+      path: ""
+      type: minutes
+    values:
+      layout: article
+      seo:
+        type: Article
   - scope:
       path: ""
     values:

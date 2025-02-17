@@ -2,6 +2,7 @@
 title: Using Channels
 category: using
 credits: web7
+weight: 50
 ---
 
 ## Channel Policies
@@ -38,8 +39,9 @@ to check for yourself. Some of the common causes, in no particular order, are:
 
 If you've not been in the channel in question recently, it's possible that
 you're affected by a wide-ranging ban, so pay attention to any bans that
-include `*` or `?` wildcards. Bans that begin with a `$` sign are extended
-ban types; you can see more on the [extbans guide](/guides/extbans)
+include `*` or `?` wildcards and to extended bans starting with `$`.
+You can read more about the different types of ban masks in the
+[masks guide](/guides/channelmodes#masks).
 
 If you find a ban which matches you but you feel wasn't intended to keep
 you out, then talk to one of the channel operators to see about having it
@@ -51,8 +53,9 @@ out what's preventing you from joining.
 
 ## Why can't I talk in a channel?
 
-The two most common causes for this are either a quiet mask -- use
+The three most common causes for this are a quiet mask -- use
 `/mode #channel q` to see the list and then check the advice above regarding
-bans -- or mode `+m`, which prevents anyone who isn't voiced from talking.
+bans -- mode `+m`, which prevents anyone who isn't voiced from talking,
+or mode `+R`, which prevents anyone who isn't logged in from talking.
 If you're still unsure, again, feel free to ask staff for help in working
 out what the problem might be.

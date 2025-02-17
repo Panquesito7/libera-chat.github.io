@@ -29,6 +29,11 @@ MD024:
   # Only check sibling headings
   siblings_only: false
 
+# MD026/no-trailing-punctuation - Trailing punctuation in heading
+MD026:
+  # Disallowed trailing punctuation
+  punctuation: ".,;:"
+
 # MD033/no-inline-html - Inline HTML
 MD033:
   # Allowed elements
@@ -50,9 +55,13 @@ MD042: false
 # MD044/proper-names - Proper names should have the correct capitalization
 MD044:
   # List of proper names
+  # Add our domains so they don't count for capitalization
   names:
     - Libera.Chat
     - Libera Chat
+    - irc.libera.chat
+    - irc.eu.libera.chat
+    - irc.us.libera.chat
   # Include code blocks
   code_blocks: false
 

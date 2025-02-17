@@ -2,6 +2,7 @@
 title: Nickname Registration
 category: using
 credits: web7
+weight: 10
 ---
 
 Your nick is how people on Libera.Chat know you. If you register it,
@@ -37,6 +38,9 @@ may have.
    ```irc
    /nick YourNick
    ```
+
+   Lines starting with the `/` symbol are commands, which you can type into
+   the chat field in the IRC client.
 
 3. **Register** your IRC nick:
 
@@ -102,15 +106,22 @@ For example:
 /connect irc.libera.chat 6667 YourNick:YourPassword
 ```
 
+If you are already connected to the network and do not wish to reconnect to
+log in, you can manually identify:
+
+```irc
+/msg NickServ IDENTIFY YourNick YourPassword
+```
+
 ## Unable to Speak
 
 If a channel is set to mode `+r`, you won't be able to join it unless you
 are registered and identified to NickServ. If you try to join, you might be
-forwarded to a different channel. If a channel is set to quiet unregistered
-users (mode `+q $~a`), you won't be able to speak while on that channel
-unless you are registered and identified.
+forwarded to a different channel. If a channel is set to mode `+R`
+or set to quiet unregistered users (mode `+q $~a`), you won't be able to speak
+while on that channel unless you are registered and identified.
 
-Both of these modes are used by some channels to reduce channel harassment
+These modes are used by some channels to reduce channel harassment
 and abuse.
 
 Once you have registered and are logged in, this issue should disappear.

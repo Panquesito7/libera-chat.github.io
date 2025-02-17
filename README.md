@@ -4,7 +4,9 @@
 
 ### Content
 
-- Use British English
+- Use British English. Exceptions apply to content:
+  - copied verbatim from external sources (notably the LICENSE files); or
+  - that must comply with technical standards
 - Channel names, nicknames, channel modes, user modes, IRC verbs, and IRC
   commands should be escaped (as code), for example: `/join #libera`
 - Filenames will be the URL slug; use lowercase alphanumeric characters and
@@ -14,6 +16,7 @@
 - Lines should be no longer than 78 characters, so that people in 80-column
   terminals can edit the text without their editor "paging over" horizontally
   when their cursor reaches the end of the line
+- Internal links must be root-relative
 
 ### Code
 

@@ -108,6 +108,7 @@ em {
 
 h1, h2, h3, h4, h5, h6 {
   margin-block-end: 0;
+  text-wrap: balance;
 }
 
 h1+*, h2+*, h3+*, h4+*, h5+*, h6+* {
@@ -284,7 +285,7 @@ header nav details a {
   padding-inline-start: 2.5rem;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 950px) {
   header .nav-toggle, header .nav-close, header nav.show .nav-close {
     display: none;
   }
@@ -362,6 +363,36 @@ footer {
   justify-content: space-between;
 }
 
-footer div:last-of-type {
-  padding-inline-start: 1rem;
+footer div {
+  line-height: 2;
+}
+
+footer div .mobile-hide {
+  display: none;
+}
+
+footer div a {
+  white-space: nowrap;
+}
+
+footer div a:not([rel*=license]), footer div .copyright {
+  display: block;
+}
+
+@media screen and (min-width: 800px) {
+  footer div {
+    line-height: 1.5;
+  }
+
+  footer div:last-of-type {
+    padding-inline-start: 1rem;
+  }
+
+  footer div .mobile-hide {
+    display: inline;
+  }
+
+  footer div a:not([rel*=license]), footer div .copyright {
+    display: initial;
+  }
 }

@@ -19,20 +19,25 @@ The board of the organisation comprises a chair, a treasurer and a
 representative from each of our specialised teams. Board seats are elected
 by the membership. The current board members are:
 
-- **Chair**: njan (James Eaton-Lee)
-- **Treasurer**: Swant (Svante Bengtson)
-- **Projects and Community Rep**: Fuchs (Christian Loosli)
-- **Engineering Rep, Vice Chair**: edk (Ed Kellett)
-- **Operations Rep**: glguy (Eric Mertens)
+- **Chair**: moonmoon
+- **Treasurer**: Swant
+- **Projects and Community Rep**: Allie
+- **Engineering Rep, Vice Chair**: spb
+- **Operations Rep**: tomaw
 
 In addition to this the organisation has two auditors elected by the membership.
 Their role is to audit the board's actions on behalf of the membership.
 Their yearly audit report, along with the annual report and bookkeeping of the
-organisation, will be published in a yearly transparency report.
+organisation, will be published in a yearly
+[transparency report](/annual-reports/).
 The current auditors are:
 
-- **Auditor**: Md (Marco d'Itri)
-- **Auditor**: kline (Gareth Pulham)
+- **Auditor**: amdj
+
+The organisation additionally has a general secretary whose role is to ensure
+the timely completion and publication of meeting minutes.
+
+- **General Secretary**: She
 
 ## Projects and community team
 
@@ -41,8 +46,10 @@ The projects and community team manages our relationships with
 and community registration, coordinating with projects and communities, and
 managing our social media.
 
-The Projects and community team comprises: edk, Fuchs, glguy, kline, mquin,
-nhandler, Swant, and Unit193.
+{% assign staff = site.data.staff %}
+{% assign pac_team = staff | where: "projects and community", "y" %}
+The Projects and community team comprises:
+{{ pac_team | map: "nick" | join: ", " }}.
 
 ## Engineering team
 
@@ -51,8 +58,8 @@ network such as contributions to the [Solanum IRCd](https://solanum.chat),
 and [Atheme Services](https://atheme.github.io/) as well as our websites,
 tools and bots.
 
-The engineering team comprises: amdj, bigpresh, edk, Fuchs, glguy,
-ilbelkyr, jess, mniip, niko, and Swant.
+{% assign eng_team = staff | where: "engineering team", "y" %}
+The engineering team comprises: {{ eng_team | map: "nick" | join: ", " }}.
 
 ## Operations team
 
@@ -60,20 +67,18 @@ The operations team manage our infrastructure, making sure the network stays
 operational and ensuring we have the right hardware and server platforms to
 operate the services we provide.
 
-The operations team comprises: bigpresh, edk, Fuchs, glguy, Md, mquin, and
-nhandler.
+{% assign ops_team = staff | where: "operations team", "y" %}
+The operations team comprises: {{ ops_team | map: "nick" | join: ", " }}.
 
 ## Wider staff and organisation membership
 
-There are several staff and members who are not involved in either of the
+There are several staff and members who are not involved in any of the
 specialised teams, yet without them the efforts of the specialised teams would
 be in vain and more importantly day to day operation of the network would be
 impossible.
 
-Staff and membership comprises: amdj, bakerst, bigpresh, coffee-cup, deedra,
-edk, el, emerson, emilsp, Freso, Fuchs, glguy, ilbelkyr, jess, JonathanD,
-jose, kline, li, Md, mniip, mquin, nhandler, niko, njan, Stx, Swant,
-and Unit193.
+Staff and membership comprises: {{ staff | map: "nick" | join: ", " }}.
 
-The best way to reach staff is the channel `#libera` or via the command
-`/stats p` which lists immediately available staff.
+Staff who are immediately available for contact can be found with `/stats p`.
+See our [FAQ](/guides/faq#how-to-find-libera-chat-staff) for other ways to
+find staff.
